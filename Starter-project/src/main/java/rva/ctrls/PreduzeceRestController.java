@@ -73,7 +73,7 @@ public class PreduzeceRestController {
 		return new ResponseEntity<Preduzece>(HttpStatus.OK);
 	}
 	
-	@Transactional
+	/*@Transactional*/
 	@DeleteMapping("preduzece/{id}")
 	@ApiOperation(value="Briše preduzeće iz baze podataka (na osnovu prosleđene ID vrednosti)")
 	public ResponseEntity<Preduzece> deletePreduzece(@PathVariable Integer id) {

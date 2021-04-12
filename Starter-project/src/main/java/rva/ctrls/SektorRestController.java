@@ -72,7 +72,7 @@ public class SektorRestController {
 		return new ResponseEntity<Sektor>(HttpStatus.OK);
 	}
 	
-	@Transactional
+	/*@Transactional*/
 	@DeleteMapping("sektor/{id}")
 	@ApiOperation(value="Briše sektor iz baze podataka (na osnovu prosleđene ID vrednosti)")
 	public ResponseEntity<Sektor> deleteSektor(@PathVariable Integer id) {

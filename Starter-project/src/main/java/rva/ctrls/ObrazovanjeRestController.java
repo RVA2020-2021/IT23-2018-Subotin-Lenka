@@ -75,7 +75,7 @@ public class ObrazovanjeRestController {
 		return new ResponseEntity<Obrazovanje>(HttpStatus.OK);
 	}
 	
-	@Transactional
+	/*@Transactional*/
 	@DeleteMapping("obrazovanje/{id}")
 	@ApiOperation(value="Briše obrazovanje iz baze podataka (na osnovu prosleđene ID vrednosti)")
 	public ResponseEntity<Obrazovanje> deleteObrazovanje(@PathVariable Integer id) {
