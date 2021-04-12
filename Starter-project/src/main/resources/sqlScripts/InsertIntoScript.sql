@@ -38,25 +38,16 @@ VALUES ('7', 'diplomirani ekonomista', 'VII-1', 'Ekonomisti proucavaju troskove 
 
 -- sektor podaci
 INSERT INTO "sektor" ("id", "naziv", "oznaka", "preduzece")
-VALUES ('1', 'distribucija', 'SDIS10', '1');
+VALUES ('1', 'prodaja', 'SPR11', '1');
 INSERT INTO "sektor" ("id", "naziv", "oznaka", "preduzece")
-VALUES ('2', 'prodaja', 'SPR11', '1');
+VALUES ('2', 'marketing', 'SMAR13', '2');
 INSERT INTO "sektor" ("id", "naziv", "oznaka", "preduzece")
-VALUES ('3', 'nabavka', 'SDNAB12', '2');
+VALUES ('3', 'razvoj', 'SRAZ14', '3');
 INSERT INTO "sektor" ("id", "naziv", "oznaka", "preduzece")
-VALUES ('4', 'marketing', 'SMAR13', '2');
+VALUES ('4', 'finansije', 'SFIN16', '4');
 INSERT INTO "sektor" ("id", "naziv", "oznaka", "preduzece")
-VALUES ('5', 'razvoj', 'SRAZ14', '3');
-INSERT INTO "sektor" ("id", "naziv", "oznaka", "preduzece")
-VALUES ('6', 'HR', 'SHR15', '3');
-INSERT INTO "sektor" ("id", "naziv", "oznaka", "preduzece")
-VALUES ('7', 'finansije', 'SFIN16', '4');
-INSERT INTO "sektor" ("id", "naziv", "oznaka", "preduzece")
-VALUES ('8', 'development', 'SDEV17', '4');
-INSERT INTO "sektor" ("id", "naziv", "oznaka", "preduzece")
-VALUES ('9', 'kvalitet', 'SKV18', '5');
-INSERT INTO "sektor" ("id", "naziv", "oznaka", "preduzece")
-VALUES ('10', 'proizvodnja', 'SPROIZ19', '5');
+VALUES ('5', 'kvalitet', 'SKV18', '5');
+
 
 --radnik podaci 
 INSERT INTO "radnik" ("id", "ime", "prezime", "broj_lk", "obrazovanje", "sektor")
@@ -70,34 +61,15 @@ VALUES ('4', 'Nikola', 'Jovanovic', '345678910', '6', '4');
 INSERT INTO "radnik" ("id", "ime", "prezime", "broj_lk", "obrazovanje", "sektor")
 VALUES ('5', 'Luka', 'Ivanovic', '310245678', '4', '5');
 INSERT INTO "radnik" ("id", "ime", "prezime", "broj_lk", "obrazovanje", "sektor")
-VALUES ('6', 'Iva', 'Pantic', '145678932', '4', '8');
+VALUES ('6', 'Iva', 'Pantic', '145678932', '4', '1');
 INSERT INTO "radnik" ("id", "ime", "prezime", "broj_lk", "obrazovanje", "sektor")
-VALUES ('7', 'Sara', 'Poparic', '214536987', '2', '6');
+VALUES ('7', 'Sara', 'Poparic', '214536987', '2', '2');
 INSERT INTO "radnik" ("id", "ime", "prezime", "broj_lk", "obrazovanje", "sektor")
-VALUES ('8', 'Lea', 'Banjac', '789324510', '5', '9');
+VALUES ('8', 'Lea', 'Banjac', '789324510', '5', '3');
 INSERT INTO "radnik" ("id", "ime", "prezime", "broj_lk", "obrazovanje", "sektor")
-VALUES ('9', 'Lazar', 'Peric', '275631098', '7', '7');
+VALUES ('9', 'Lazar', 'Peric', '275631098', '7', '4');
 INSERT INTO "radnik" ("id", "ime", "prezime", "broj_lk", "obrazovanje", "sektor")
-VALUES ('10', 'Una', 'Ilic', '876432501', '5', '10');
+VALUES ('10', 'Una', 'Ilic', '876432501', '5', '5');
 
-INSERT INTO "radnik" ("id", "ime", "prezime", "broj_lk", "obrazovanje", "sektor")
-VALUES ('11', 'Sofija', 'Petrovic', '966877655', '1', '1');
-INSERT INTO "radnik" ("id", "ime", "prezime", "broj_lk", "obrazovanje", "sektor")
-VALUES ('12', 'Deana', 'Jovic', '667733441', '3', '2');
-INSERT INTO "radnik" ("id", "ime", "prezime", "broj_lk", "obrazovanje", "sektor")
-VALUES ('13', 'Simona', 'Rajic', '334455512', '1', '3');
-INSERT INTO "radnik" ("id", "ime", "prezime", "broj_lk", "obrazovanje", "sektor")
-VALUES ('14', 'Nenad', 'Ristic', '112233456', '6', '4');
-INSERT INTO "radnik" ("id", "ime", "prezime", "broj_lk", "obrazovanje", "sektor")
-VALUES ('15', 'Ivan', 'Tesanovic', '103247859', '4', '5');
-INSERT INTO "radnik" ("id", "ime", "prezime", "broj_lk", "obrazovanje", "sektor")
-VALUES ('16', 'Tea', 'Todorovic', '876934567', '4', '8');
-INSERT INTO "radnik" ("id", "ime", "prezime", "broj_lk", "obrazovanje", "sektor")
-VALUES ('17', 'Helena', 'Radulovic', '678945310', '2', '6');
-INSERT INTO "radnik" ("id", "ime", "prezime", "broj_lk", "obrazovanje", "sektor")
-VALUES ('18', 'Ena', 'Popov', '765436789', '5', '9');
-INSERT INTO "radnik" ("id", "ime", "prezime", "broj_lk", "obrazovanje", "sektor")
-VALUES ('19', 'Anja', 'Delic', '203456789', '7', '7');
-INSERT INTO "radnik" ("id", "ime", "prezime", "broj_lk", "obrazovanje", "sektor")
-VALUES ('20', 'Ksenija', 'Jovic', '782113456', '5', '10');
+
 
