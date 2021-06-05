@@ -13,13 +13,24 @@ import { MatGridListModule } from '@angular/material/grid-list'
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatSelectModule} from '@angular/material/select';
+
 import { HomeComponent } from './components/core/home/home.component';
 import { AuthorComponent } from './components/core/author/author.component';
 import { AboutComponent } from './components/core/about/about.component';
 import { PreduzeceComponent } from './components/preduzece/preduzece.component';
-import { RadnikComponent } from './components/radnik/radnik.component';
 import { ObrazovanjeComponent } from './components/obrazovanje/obrazovanje.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PreduzeceDialogComponent } from './components/dialogs/preduzece-dialog/preduzece-dialog.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import {  MatInputModule } from '@angular/material/input';
+import { ObrazovanjeDialogComponent } from './components/dialogs/obrazovanje-dialog/obrazovanje-dialog.component';
+import { SektorComponent } from './components/sektor/sektor.component';
+import { SektorDialogComponent } from './components/dialogs/sektor-dialog/sektor-dialog.component';
+
 
 
 @NgModule({
@@ -29,8 +40,12 @@ import { HttpClientModule } from '@angular/common/http';
     AuthorComponent,
     AboutComponent,
     PreduzeceComponent,
-    RadnikComponent,
-    ObrazovanjeComponent
+    ObrazovanjeComponent,
+    PreduzeceDialogComponent,
+    ObrazovanjeDialogComponent,
+    SektorComponent,
+    SektorDialogComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -44,7 +59,13 @@ import { HttpClientModule } from '@angular/common/http';
     MatExpansionModule,
     MatTableModule,
     HttpClientModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatSnackBarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatDialogModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,3 @@
-
 export class Preduzece {
 
     id: number;

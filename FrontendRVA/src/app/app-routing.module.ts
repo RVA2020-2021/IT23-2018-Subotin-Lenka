@@ -5,13 +5,14 @@ import { AuthorComponent } from './components/core/author/author.component';
 import { HomeComponent } from './components/core/home/home.component';
 import { ObrazovanjeComponent } from './components/obrazovanje/obrazovanje.component';
 import { PreduzeceComponent } from './components/preduzece/preduzece.component';
-import { RadnikComponent } from './components/radnik/radnik.component';
+import { SektorComponent } from './components/sektor/sektor.component';
+
 
 const routes: Routes = [
 
   { path: 'preduzece', component: PreduzeceComponent },
   { path: 'obrazovanje', component: ObrazovanjeComponent },
-  { path: 'radnik', component: RadnikComponent },
+  { path: 'sektor', component: SektorComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'author', component: AuthorComponent },
