@@ -1,5 +1,7 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Subscription } from 'rxjs';
 import { Preduzece } from 'src/app/models/preduzece';
@@ -17,6 +19,9 @@ export class SektorComponent implements OnInit, OnDestroy {
   displayedColumns = ['id', 'naziv', 'oznaka', 'preduzece', 'actions'];
   dataSource: MatTableDataSource<Sektor>;
   subscription: Subscription;
+  selektovanSektor: Sektor; 
+  @ViewChild(MatSort, {static: false}) sort: MatSort;
+  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
 
   constructor(private sektorService: SektorService, private dialog: MatDialog) { }
 
@@ -32,6 +37,27 @@ export class SektorComponent implements OnInit, OnDestroy {
     this.subscription = this.sektorService.getAllSektori().subscribe(
       data => {
           this.dataSource = new MatTableDataSource(data);
+
+          this.dataSource.filterPredicate = (data, filter: string) =>{
+            const accumulator = (currentTerm, key) => {
+              return key === 'preduzece' ? currentTerm + data.preduzece.naziv : currentTerm + data[key];
+            }
+            const dataStr = Object.keys(data).reduce(accumulator,'').toLowerCase();
+            const transformedFilter = filter.trim().toLowerCase();
+            return dataStr.indexOf(transformedFilter) !== -1;
+          };
+    
+          this.dataSource.sortingDataAccessor = (data, property) => {
+            switch(property) {
+              case 'preduzece': return data.preduzece.naziv.toLowerCase();
+    
+              default: return data[property];
+            }
+          };
+       
+
+          this.dataSource.sort = this.sort ;
+          this.dataSource.paginator = this.paginator ;
       }
     ),
     (error: Error) => {
@@ -54,7 +80,13 @@ export class SektorComponent implements OnInit, OnDestroy {
   }
 
   selectRow(row: any) {
-    console.log(row);
+    this.selektovanSektor = row;
+  }
+
+  applyFilter(filterValue: string) {
+    filterValue = filterValue.trim();
+    filterValue = filterValue.toLocaleLowerCase();   
+    this.dataSource.filter = filterValue;
   }
 
 }

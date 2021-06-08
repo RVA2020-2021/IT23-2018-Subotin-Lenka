@@ -30,7 +30,10 @@ import {  MatInputModule } from '@angular/material/input';
 import { ObrazovanjeDialogComponent } from './components/dialogs/obrazovanje-dialog/obrazovanje-dialog.component';
 import { SektorComponent } from './components/sektor/sektor.component';
 import { SektorDialogComponent } from './components/dialogs/sektor-dialog/sektor-dialog.component';
-
+import { RadnikComponent } from './components/radnik/radnik.component';
+import { RadnikDialogComponent } from './components/dialogs/radnik-dialog/radnik-dialog.component';
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -45,6 +48,8 @@ import { SektorDialogComponent } from './components/dialogs/sektor-dialog/sektor
     ObrazovanjeDialogComponent,
     SektorComponent,
     SektorDialogComponent,
+    RadnikComponent,
+    RadnikDialogComponent
   
   ],
   imports: [
@@ -66,6 +71,8 @@ import { SektorDialogComponent } from './components/dialogs/sektor-dialog/sektor
     FormsModule,
     MatDialogModule,
     MatSelectModule,
+    MatSortModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
