@@ -1,0 +1,9 @@
+
+-- Link za Heroku- deployment backend-a --
+
+https://rva-backend-lenka-subotin.herokuapp.com/
+
+-- Link za Netlify- deployment frontend-a --
+
+https://heuristic-bell-599bce.netlify.app/home
+
