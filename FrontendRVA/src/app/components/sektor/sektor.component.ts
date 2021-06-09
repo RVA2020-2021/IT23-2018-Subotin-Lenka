@@ -90,3 +90,5 @@ export class SektorComponent implements OnInit, OnDestroy {
   }
 
 }
+
+
